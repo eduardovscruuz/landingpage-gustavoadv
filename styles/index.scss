@@ -1,0 +1,381 @@
+$gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #e9ba5c 8%, #cf9d30 30%, #d4aa47 40%, transparent 80%),
+radial-gradient(ellipse farthest-corner at left top, #d1c62e 0%, #e9d981 8%, #d8b75b 25%, #af831a 62.5%, #9c7825 100%);;
+
+$goldClick: radial-gradient(ellipse farthest-corner at right bottom, #bda124 0%, #8b671e 8%, #976f17 30%, #bd8c1b 40%, transparent 80%),
+radial-gradient(ellipse farthest-corner at left top, #e2e0e0 0%, #c7b96d 8%, #c0a250 25%, #7c5c11 62.5%, #85651d 100%);;
+
+::-webkit-scrollbar{
+    width: 0.7em;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 40px;
+    background-color: rgba(158, 158, 158, 0.5);
+}
+
+body{
+    overflow-x:hidden;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: rgb(29, 29, 29); 
+    font-family: 'Encode Sans Expanded', sans-serif; 
+}
+
+#container{
+    overflow-x:hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+header{
+    height: 15vh;
+    background-color:white;
+    padding: 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        
+            
+        
+
+    }
+
+    button{
+        font-family: 'Encode Sans Expanded', sans-serif; 
+        width: 30%;
+        border: none;
+        font-size: 2vh;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 900;
+        outline: none;
+        border-radius: 10px;
+        padding: 20px 30px;
+        background: $gold;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.29);
+        transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-10%);
+    }
+
+    &:active{
+        background: $goldClick;
+    }
+
+    }
+
+main{
+    height: 85vh;
+    background: url(../assets/idoso-fundo-pc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    
+    #three{
+        position: absolute;
+        right: 0;
+        width: 45%;
+        height: 65%;
+        background: $gold;
+        display: flex;
+        border-radius: 50px 0px 0px 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+        text-shadow: 3px 3px 8px #00000071;
+        
+
+        h1{
+            margin: 0;
+            font-size: 5vw;
+            font-weight: 900;
+        }
+        h2{
+            margin: 0;
+            font-size: 3vw;
+            font-weight: 900;
+        }
+        h3{
+            text-align: center;
+            width: 74%;
+            margin: 0;
+            font-size: 1.3vw;
+            font-weight: 900;
+        }
+
+        .arrow-container {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            margin-top: 5%; 
+            
+            .arrow {
+            position: absolute;
+            width: 28px;
+            height: 8px;
+            opacity: 0;
+            transform: scale3d(0.5, 0.5, 0.5);
+            animation: move 3s ease-out infinite;
+        } 
+        .arrow:first-child {
+            animation: move 3s ease-out 1s infinite;
+        }
+        
+        .arrow:nth-child(2) {
+            animation: move 3s ease-out 2s infinite;
+        }
+        
+        .arrow:before,
+        .arrow:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            background: #000000;
+            height: 100%;
+            width: 51%;
+        }
+        
+        .arrow:before {
+            left: 0;
+            transform: skew(0deg, 30deg);
+        }
+        
+        .arrow:after {
+            right: 0;
+            width: 50%;
+            transform: skew(0deg, -30deg);
+        }
+        
+        @keyframes pulse {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes move {
+            25% {
+                opacity: 1;
+            }
+        
+            33% {
+                opacity: 1;
+                transform: translateY(30px);
+            }
+        
+            67% {
+                opacity: 1;
+                transform: translateY(40px);
+            }
+        
+            100% {
+                opacity: 0;
+                transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+            }
+    }
+        }
+    
+}}
+
+section{
+    height: 120vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    
+        text-shadow: 3px 3px 8px #00000049; 
+      .texts{
+            height: 90%;
+            width: 90%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           // border: 1px solid green;
+        }
+        #four{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 47%;
+            height: 90%;
+          //  border: 1px solid red;
+
+      
+        h3{
+            font-size: 8.3vh;
+            letter-spacing: 17px;
+            margin: 0;
+            text-transform: uppercase;
+            align-self: flex-start;
+            font-weight: 800;
+            text-align: left;
+        }
+        h4{
+            margin: 0;
+            font-size: 3.3vh;
+            text-align: justify;
+        }
+        p{
+            font-size: 2.4vh;
+            margin: 0;
+            text-align: justify;
+            margin-top: 3%;
+        }
+        button{
+
+            margin-top: 5%;
+            width: 90%;
+            &:hover{
+                transform: translateY(-10%);
+            }
+        }
+    }
+    #five{
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        width: 47%;
+        height: 90%;
+        //border: 1px solid red;
+
+        .texts{
+            align-items: flex-start;
+            height: 50%;
+        }
+        h3{
+            font-size: 3.3vh;
+            margin: 0;
+        }
+
+        ul{
+            font-size: 2.4vh;
+            padding: 0 4%;
+        }
+        #img-container{
+          //  border: 1px solid blue;
+            align-self: flex-start;
+            margin-left: 5%;
+            height: 40%;
+        }
+        img{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin-top: 2%;
+            height: 100%;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0% 5%;
+    color: rgb(250, 250, 250,0.5);
+    height: 10vh;
+    background-color: black;
+    text-transform:uppercase;
+    font-size: 12px;
+        
+    p{padding: 7px;font-weight: 600;}
+    span{font-size: 9px;
+        a{
+            text-decoration: underline;
+            color: rgb(250, 250, 250,0.5);        }
+    }
+}
+
+.animate{
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 0.8s ease-out;
+}
+
+.animate.from-bottom-text{
+    transform: translateY(200%);
+}
+.animate.from-top{
+    transform: translateY(-100%);
+}
+.animate.from-bottom{
+    transform: translateY(30%);
+}
+.animate.from-right{
+    transform: translateX(10%);
+}
+.animate.from-left{
+    transform: translateX(-10%);
+}
+
+.animate.show{
+    transform: translate(0);
+    filter: blur(0);
+    opacity: 1;
+}
+
+.wpp-btn.animate.from-bottom{
+    transition: transform 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1921px) {
+    main{
+        
+        #three{           
+    
+            h1{
+                font-size: 4vw;
+            }
+            h2{
+                font-size: 2.5vw;
+            }
+            h3{
+                font-size: 1.1vw;
+            }
+        }
+    
+        
+    }
+}
