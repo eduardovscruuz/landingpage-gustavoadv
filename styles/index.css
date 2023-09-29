@@ -162,6 +162,12 @@ main #three .arrow-container .arrow:after {
     transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
   }
 }
+main #mobile-h3 {
+  display: none;
+}
+main #mobile-h4 {
+  display: none;
+}
 
 section {
   height: 120vh;
@@ -306,6 +312,274 @@ footer span a {
   transition: transform 0.2s;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    background-color: rgb(226, 226, 226);
+  }
+  #container {
+    overflow-x: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    justify-content: center;
+  }
+  button {
+    display: none;
+  }
+  img {
+    width: 95%;
+  }
+  main {
+    height: 85vh;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  main #three {
+    position: absolute;
+    right: unset;
+    width: 100%;
+    height: 70%;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #e9ba5c 8%, #cf9d30 30%, #d4aa47 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #d1c62e 0%, #e9d981 8%, #d8b75b 25%, #af831a 62.5%, #9c7825 100%);
+    display: flex;
+    border-radius: 0 0 50px 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4431372549);
+    top: 0;
+  }
+  main #three h1 {
+    margin: 0;
+    font-size: 12vw;
+    font-weight: 900;
+  }
+  main #three h2 {
+    margin: 0;
+    font-size: 7vw;
+    font-weight: 900;
+  }
+  main #three h3 {
+    text-align: center;
+    width: 74%;
+    margin: 0;
+    font-size: 3.2vw;
+    font-weight: 900;
+  }
+  main #three .arrow-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-top: 5%;
+  }
+  main #three .arrow-container .arrow {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  main #three .arrow-container .arrow:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  main #three .arrow-container .arrow:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  main #three .arrow-container .arrow:before,
+  main #three .arrow-container .arrow:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    background: #000000;
+    height: 100%;
+    width: 51%;
+  }
+  main #three .arrow-container .arrow:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  main #three .arrow-container .arrow:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes move {
+    25% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  main #mobile-h3 {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10vw;
+    letter-spacing: 4px;
+    margin: 0;
+    margin-bottom: 3%;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4431372549);
+  }
+  main #mobile-h4 {
+    display: block;
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10%;
+    padding: 0 5%;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4431372549);
+  }
+  section {
+    height: unset;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Encode Sans Expanded", sans-serif;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2862745098);
+  }
+  section .texts {
+    height: 90%;
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section #four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 70vh;
+  }
+  section #four .texts {
+    flex-direction: column-reverse;
+  }
+  section #four h3 {
+    display: none;
+    font-size: 6.3vw;
+    letter-spacing: 11px;
+    margin: 0;
+    text-transform: uppercase;
+    align-self: center;
+    font-weight: 800;
+    text-align: left;
+    font-size: 5.4vh;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  section #four h4 {
+    display: none;
+    margin: 0;
+    font-size: 4.3vw;
+    text-align: justify;
+    font-size: 2.3vh;
+    text-align: center;
+    margin: 0;
+  }
+  section #four p {
+    font-size: 1.5vh;
+    margin: 0;
+    text-align: justify;
+    margin-top: 3%;
+  }
+  section #four button {
+    padding: 5%;
+    font-size: 1.4vh;
+    display: block;
+    margin-top: 5%;
+    width: 100%;
+    margin-bottom: 8%;
+  }
+  section #four button:hover {
+    transform: translateY(-10%);
+  }
+  section #five {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65vh;
+    background-color: white;
+  }
+  section #five .texts {
+    align-items: flex-start;
+    height: 100%;
+    width: 55%;
+    padding: 0 2%;
+  }
+  section #five h3 {
+    font-size: 1.4vh;
+    margin: 0;
+  }
+  section #five ul {
+    font-size: 1.3vh;
+    padding: unset;
+    list-style: none;
+  }
+  section #five ul li {
+    font-weight: 600;
+    margin-top: 2%;
+    padding: 2%;
+    box-shadow: inset 0px 0px 7px 3px rgba(199, 199, 199, 0.293);
+  }
+  section #five #img-container {
+    align-self: flex-start;
+    margin-left: 0%;
+    height: 100%;
+    width: 45%;
+    background-image: url(../assets/idoso-fundo-mobile1.png);
+    background-size: cover;
+  }
+  section #five img {
+    display: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 2%;
+    height: 100%;
+  }
+  footer {
+    flex-direction: column;
+    padding: 0% 5%;
+    height: 8vh;
+    font-size: 1.7vw;
+  }
+  footer p {
+    padding: 2px;
+  }
+  footer span {
+    font-size: 1.7vw;
+  }
+}
 @media screen and (min-width: 1921px) {
   main #three h1 {
     font-size: 4vw;

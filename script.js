@@ -13,3 +13,17 @@ const intersectObserver = new IntersectionObserver(
 const elements = document.querySelectorAll(".animate")
 
 elements.forEach(element => intersectObserver.observe(element))
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
