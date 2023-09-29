@@ -1,3 +1,5 @@
+
+
 const intersectObserver = new IntersectionObserver(
     entries => {
     entries.forEach(entry => {
@@ -15,15 +17,9 @@ const elements = document.querySelectorAll(".animate")
 elements.forEach(element => intersectObserver.observe(element))
 
 
+const element = document.getElementById("three");
 
-
-
-
-
-
-
-
-
-
-
-  
+  // Verifica se o elemento foi encontrado
+  if (element) {
+    // Remove a classe "from-right" do elemento
+    element.classList.remove("from-right");}

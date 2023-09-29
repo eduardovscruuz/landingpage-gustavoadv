@@ -39,8 +39,11 @@ header {
   justify-content: space-between;
 }
 
-button {
+.wpp-btn {
   font-family: "Encode Sans Expanded", sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
   width: 30%;
   border: none;
   font-size: 2vh;
@@ -55,10 +58,10 @@ button {
   transition: all 0.2s;
   cursor: pointer;
 }
-button:hover {
+.wpp-btn:hover {
   transform: translateY(-10%);
 }
-button:active {
+.wpp-btn:active {
   background: radial-gradient(ellipse farthest-corner at right bottom, #bda124 0%, #8b671e 8%, #976f17 30%, #bd8c1b 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #e2e0e0 0%, #c7b96d 8%, #c0a250 25%, #7c5c11 62.5%, #85651d 100%);
 }
 
@@ -214,11 +217,11 @@ section #four p {
   text-align: justify;
   margin-top: 3%;
 }
-section #four button {
+section #four .wpp-btn {
   margin-top: 5%;
   width: 90%;
 }
-section #four button:hover {
+section #four .wpp-btn:hover {
   transform: translateY(-10%);
 }
 section #five {
@@ -328,7 +331,7 @@ footer span a {
   header {
     justify-content: center;
   }
-  button {
+  .wpp-btn {
     display: none;
   }
   img {
@@ -511,7 +514,7 @@ footer span a {
     text-align: justify;
     margin-top: 3%;
   }
-  section #four button {
+  section #four .wpp-btn {
     padding: 5%;
     font-size: 1.4vh;
     display: block;
@@ -519,7 +522,7 @@ footer span a {
     width: 100%;
     margin-bottom: 8%;
   }
-  section #four button:hover {
+  section #four .wpp-btn:hover {
     transform: translateY(-10%);
   }
   section #five {

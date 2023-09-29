@@ -47,8 +47,11 @@ header{
 
     }
 
-    button{
+    .wpp-btn{
         font-family: 'Encode Sans Expanded', sans-serif; 
+        text-decoration: none;
+        color: black;
+        text-align: center;
         width: 30%;
         border: none;
         font-size: 2vh;
@@ -244,7 +247,7 @@ section{
             text-align: justify;
             margin-top: 3%;
         }
-        button{
+        .wpp-btn{
 
             margin-top: 5%;
             width: 90%;
@@ -395,7 +398,7 @@ footer{
         justify-content: center;
         }
     
-        button{
+        .wpp-btn{
             display: none;    
         }
         img{
@@ -600,7 +603,7 @@ text-shadow: 3px 3px 8px #00000071;
                 text-align: justify;
                 margin-top: 3%;
             }
-            button{
+            .wpp-btn{
                 padding: 5%;
                 font-size: 1.4vh;
                 display: block;
